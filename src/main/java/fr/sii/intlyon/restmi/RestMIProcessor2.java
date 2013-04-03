@@ -69,6 +69,7 @@ public class RestMIProcessor2 extends AbstractProcessor {
         Service service = element.getAnnotation(Service.class);
         //Get the class name of the option bean
         className = element.getEnclosingElement().toString();
+        className = element.getClass().getSimpleName();
 
         //Check if the type in the member is a String. If not we igonre it
         //We are currently only supporting String type
